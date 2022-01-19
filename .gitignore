@@ -1,5 +1,7 @@
 # folders
 pa004_health_insurance_cross_sell
+__pycache__
 
 # file extensions
 *.csv
+*.ini
