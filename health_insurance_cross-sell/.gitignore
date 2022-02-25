@@ -1,0 +1,7 @@
+# models
+model_extra_trees.pkl
+model_linear_regression.pkl
+model_random_forest.pkl
+
+# file extensions
+*.csv
