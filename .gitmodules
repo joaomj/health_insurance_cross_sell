@@ -1,0 +1,3 @@
+[submodule "health_insurance_cross-sell/src/health_insurance_app"]
+	path = health_insurance_cross-sell/src/health_insurance_app
+	url = https://git.heroku.com/healthinsurancejoaomj.git
