@@ -1,9 +1,9 @@
 # models
-model_extra_trees.pkl
-model_random_forest.pkl
+
 
 # file extensions
 *.csv
+*.pkl
 
 # files
 deploy.ipynb
