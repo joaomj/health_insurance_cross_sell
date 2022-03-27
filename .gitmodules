@@ -1,6 +1,6 @@
 [submodule "health_insurance_cross-sell/src/health_insurance_app"]
 	path = health_insurance_cross-sell/src/health_insurance_app
 	url = https://github.com/joaomj/health_insurance_app.git
-[submodule "health_insurance_app_aws"]
-	path = health_insurance_app_aws
+[submodule "health_insurance_cross-sell/src/health_insurance_app_aws"]
+	path = health_insurance_cross-sell/src/health_insurance_app_aws
 	url = https://github.com/joaomj/health_insurance_app_aws.git
