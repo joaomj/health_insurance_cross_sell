@@ -4,6 +4,7 @@
 # file extensions
 *.csv
 *.pkl
+*.env
 
 # files
 deploy.ipynb
