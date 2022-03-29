@@ -6,6 +6,7 @@ Using Machine Learning algorithms to optimize an insurance company's marketing c
 
 ## Business Problem
 An insurance company wants to offer new auto insurance to its customers. However, its marketing budget is limited. The company asked its Data Science team to find out which customers should be given priority to receive new insurance offers.
+
 ## Business Assumptions
 ## Solution Strategy
 After understanding the problem (optimizing the use of the marketing budget), the company's data team adopted a strategy of **classification**: customers will be classified according to the probability of purchasing the new insurance. This probability will be provided by a Machine Learning algorithm.
@@ -20,7 +21,7 @@ That is, in data scientists lingo, a **“Learn to Rank”** solution.
 The original dataset is at Kaggle, but for educational purposes it was stored in a SQL database on AWS.
 
 #### 2. Data Cleaning
-**2.1. Data Overview:** head, dimensions, types.
+**2.1. Data Overview:** head, dimensions, data types.
 
 **2.2. Null Value Check**
 
@@ -75,19 +76,41 @@ Access to the model is through a **Streamlit** application hosted in a virtual m
 In this application, a web page asks the user to inform the percentage of customers most likely to buy that he wants to know (top %).
 The application then returns a table containing the data of these customers with the option to download this table as a .csv file
 ## Top 3 Data Insights
-[VIEW 'INSIGHT' IMAGES on github]
+### Insight 01:
 
-### Insight 01: 
+![insight01](/health_insurance_cross-sell/reports/figures/insight-01-pct-responses.png)
 Only 12.26% of customers are interested in a new insurance offer. Considering the size of the base (300k+ customers), it is necessary to develop a solution to find these few interested customers at a low cost.
 
-### Insight 02: 
+### Insight 02:
+
+![insight02](/health_insurance_cross-sell/reports/figures/insight02-avg-age-interested.png) 
 The average age of interested customers is approximately 45 years.
 
 ### Insight 03: 
+
+![insight03](/health_insurance_cross-sell/reports/figures/insight03-damaged-before.png)
 Customers with a previously damaged vehicle are 45x more likely to wish to receive a new insurance offer.
 ## Machine Learning Model Applied
 After cross-validation, the model chosen was Random Forest, as it presented the best average result in the *Recall@K* metric, the most relevant in this problem.
+
 ## Machine Learning Performance
+
+**Holdout Validation:**
+|MODEL              |PRECISION  |RECALL |k%    |
+|:-----------------:|:---------:|:-----:|:----:|
+|random_forest      |0.2718     |0.8921 |40.0  |
+|extra_trees        |0.2696     |0.8848 |40.0  |
+|linear_regression  |0.2659     |0.8726 |40.0  |
+|knn                |0.2616     |0.8587 |40.0  |
+
+**Cross-validation:**
+|MODEL              |K_FOLDS    |PRECISION_MEAN |PRECISION_STD  |RECALL_MEAN    |RECALL_STD |k%    |
+|:-----------------:|:---------:|:-------------:|:-------------:|:-------------:|:---------:|:----:|
+|random_forest      |5          |0.2734         |0.0007         |0.8924         |0.0020     |40.0  |
+|extra_trees        |5          |0.2697         |0.0009         |0.8800         |0.0019     |40.0  |
+|linear_regression  |5          |0.2672         |0.0016         |0.8720         |0.0029     |40.0  |
+|knn                |5          |0.2631         |0.0008         |0.8587         |0.0016     |40.0  |
+
 ## Business Results
 With the Machine Learning model adopted, the marketing team made call campaigns for ~90% of interested customers, reaching only 40% of the total customer base.
 
