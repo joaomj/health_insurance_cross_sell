@@ -1,63 +1,106 @@
-# Health Insurance Cross-Sell
 
-## This project aims to identify potential clients.
+# Insurance Cross Sell
 
-#### This project was made by Joao Marcos Visotaky Junior.
+Using Machine Learning algorithms to optimize an insurance company's marketing campaigns.
 
-# 1. Business Problem.
 
-# 2. Business Assumptions.
+## Business Problem
+An insurance company wants to offer new auto insurance to its customers. However, its marketing budget is limited. The company asked its Data Science team to find out which customers should be given priority to receive new insurance offers.
+## Business Assumptions
+## Solution Strategy
+After understanding the problem (optimizing the use of the marketing budget), the company's data team adopted a strategy of **classification**: customers will be classified according to the probability of purchasing the new insurance. This probability will be provided by a Machine Learning algorithm.
 
-# 3. Solution Strategy
+With the base ordered by the purchase probability, the marketing team will be able to focus its efforts only on the customers that are at the top of the sorted dataset ( = greater purchase probability).
 
-My strategy to solve this challenge was:
+Thus, we can say that the expected result of Machine Learning models is to group the customers most likely to purchase at the top of the dataset, so that a small % of the dataset, concentrated at the top, contains a large % of the customers most likely to purchase.
 
-**Step 01. Data Description:**
+That is, in data scientists lingo, a **“Learn to Rank”** solution.
+### Solution Steps
+#### 1. Data Extraction
+The original dataset is at Kaggle, but for educational purposes it was stored in a SQL database on AWS.
 
-**Step 02. Feature Engineering:**
+#### 2. Data Cleaning
+**2.1. Data Overview:** head, dimensions, types.
 
-**Step 03. Data Filtering:**
+**2.2. Null Value Check**
 
-**Step 04. Exploratory Data Analysis:**
+**2.3. Checking Attribute Types**
 
-**Step 05. Data Preparation:**
+#### 3. Exploratory Data Analysis - EDA
 
-**Step 06. Feature Selection:**
+**3.1. Descriptive statistics**
 
-**Step 07. Machine Learning Modelling:**
+**3.2. Separation of Attribute Classes:** numeric and categorical.
 
-**Step 08. Hyperparameter Fine Tunning:**
+**3.3. Univariate Analysis**
 
-**Step 09. Convert Model Performance to Business Values:**
+**3.4. Bivariate Analysis:** relationship between the response variable and several attributes, most of them categorical.
 
-**Step 10. Deploy Modelo to Production:**
+**3.5. Multivariate analysis:**
 
-# 4. Top 3 Data Insights
+**3.5.1. Correlation between all numeric attributes:** Pearson Correlation.
 
-**Hypothesis 01:**
+**3.5.2. Verification of the degree of relationship between categorical attributes:** Cramér's V.
 
-**True/False.**
+#### 4. Data Preparation
 
-**Hypothesis 02:**
+**4.1. Split dataset:** into training set and test set.
 
-**True/False.**
+**4.2. Standardization**
 
-**Hypothesis 03:**
+**4.3. Rescaling**
 
-**True/False.**
+**4.4. Encoding**
 
-# 5. Machine Learning Model Applied
+#### 5. Features Selection: 
+The ExtraTrees classifier algorithm was used to select attributes.
 
-# 6. Machine Learning Modelo Performance
+#### 6. Machine Learning Model Training
+Four models were chosen for evaluation: K-Nearest Neighbors, Linear Regression, ExtraTrees and Random Forest.
 
-# 7. Business Results
+#### 7. Machine Learning Model Selection
+The trained models were evaluated through **Holdout Validation** and **Cross-validation**. 
 
-# 8. Conclusions
+The evaluation metrics are: *Precision@K* and *Recall@K*, the latter being the most important for the problem at hand.
 
-# 9. Lessons Learned
+#### 8. Machine Learning Model Deployment
+The deployment architecture is this: [IMAGE SCHEMATIZING DEPLOY].
 
-# 10. Next Steps to Improve
+The model was deployed as a containerized **AWS Lambda Function** via **Docker**.
 
-# LICENSE
+The “real” data (the test dataset) was hosted on **AWS S3**.
 
-# All Rights Reserved - Comunidade DS 2022
+Access to the model is through a **Streamlit** application hosted in a virtual machine on AWS EC2: [ACCESS URL](http://3.93.153.219:8501/).
+
+In this application, a web page asks the user to inform the percentage of customers most likely to buy that he wants to know (top %).
+The application then returns a table containing the data of these customers with the option to download this table as a .csv file
+## Top 3 Data Insights
+[VIEW 'INSIGHT' IMAGES on github]
+
+### Insight 01: 
+Only 12.26% of customers are interested in a new insurance offer. Considering the size of the base (300k+ customers), it is necessary to develop a solution to find these few interested customers at a low cost.
+
+### Insight 02: 
+The average age of interested customers is approximately 45 years.
+
+### Insight 03: 
+Customers with a previously damaged vehicle are 45x more likely to wish to receive a new insurance offer.
+## Machine Learning Model Applied
+After cross-validation, the model chosen was Random Forest, as it presented the best average result in the *Recall@K* metric, the most relevant in this problem.
+## Machine Learning Performance
+## Business Results
+With the Machine Learning model adopted, the marketing team made call campaigns for ~90% of interested customers, reaching only 40% of the total customer base.
+
+Assuming a cost per call of [$10.00](https://insuranceleadsguide.com/buying-insurance-leads/) and considering the total number of customers (381,109), the company achieved savings of $2,286,660 on phone calls costs (60% cost reduction).
+## Next Steps
+* Implement access control to the application link.
+* Allow user to upload customer data as a csv file.
+* Display a dashboard on the application page with a brief exploratory analysis of the customer dataset used.
+* Implement versioning of databases and ML models.
+## Conclusion
+In this project, it was demonstrated how the data scientists team can optimize a company's marketing budget allocating it to the people most likely to buy.
+
+The [CRISP-DM framework, adapted for Data Science](https://towardsdatascience.com/crisp-dm-ready-for-machine-learning-projects-2aad9172056a), was used to guide the resolution of this problem. The main reason for adopting this framework is its ability to offer solutions and business insights quickly, on an ongoing basis, during a Data Science project.
+
+Finally, in this project I had the opportunity to use solutions from the largest cloud provider in the world (AWS), so that the resolution of the problem was as close as possible to a real situation.
+## References
