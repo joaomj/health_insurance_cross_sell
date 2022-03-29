@@ -76,6 +76,8 @@ The “real” data (the test dataset) was hosted on **AWS S3**.
 
 Access to the model is through a **Streamlit** application hosted in a virtual machine on AWS EC2: [ACCESS URL](http://3.93.153.219:8501/).
 
+
+![streamlit_app_screenshot](/health_insurance_cross-sell/reports/figures/streamlit_app_screenshot.png)
 In this application, a web page asks the user to inform the percentage of customers most likely to buy that he wants to know (top %).
 The application then returns a table containing the data of these customers with the option to download this table as a .csv file
 ## Top 3 Data Insights
