@@ -68,7 +68,7 @@ The evaluation metrics are: *Precision@K* and *Recall@K*, the latter being the m
 
 ![deploy_architecture](/health_insurance_cross-sell/references/deploy_architecture.png)
 
-[Credits](https://towardsdatascience.com/serverless-deployment-of-machine-learning-models-on-aws-lambda-5bd1ca9b5c42)
+[image credits](https://towardsdatascience.com/serverless-deployment-of-machine-learning-models-on-aws-lambda-5bd1ca9b5c42)
 
 The model was deployed as a containerized **AWS Lambda Function** via **Docker**.
 
