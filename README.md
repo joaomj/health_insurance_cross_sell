@@ -66,7 +66,7 @@ The evaluation metrics are: *Precision@K* and *Recall@K*, the latter being the m
 
 #### 8. Machine Learning Model Deployment
 
-![deploy_architecture](/health_insurance_cross-sell/references/deploy_architecture.png)
+![deploy_architecture](/health_insurance_cross-sell/references/deploy_architecture1.png)
 
 [image credits](https://towardsdatascience.com/serverless-deployment-of-machine-learning-models-on-aws-lambda-5bd1ca9b5c42)
 
