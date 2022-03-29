@@ -65,7 +65,10 @@ The trained models were evaluated through **Holdout Validation** and **Cross-val
 The evaluation metrics are: *Precision@K* and *Recall@K*, the latter being the most important for the problem at hand.
 
 #### 8. Machine Learning Model Deployment
-The deployment architecture is this: [IMAGE SCHEMATIZING DEPLOY].
+
+![deploy_architecture](/health_insurance_cross-sell/references/deploy_architecture.png)
+
+[Credits](https://towardsdatascience.com/serverless-deployment-of-machine-learning-models-on-aws-lambda-5bd1ca9b5c42)
 
 The model was deployed as a containerized **AWS Lambda Function** via **Docker**.
 
@@ -126,9 +129,9 @@ Assuming a cost per call of [$10.00](https://insuranceleadsguide.com/buying-insu
 ## Conclusion
 In this project, it was demonstrated how the data scientists team can optimize a company's marketing budget allocating it to the people most likely to buy.
 
-The [CRISP-DM framework, adapted for Data Science](https://towardsdatascience.com/crisp-dm-ready-for-machine-learning-projects-2aad9172056a), was used to guide the resolution of this problem. The main reason for adopting this framework is its ability to offer solutions and business insights quickly, on an ongoing basis, during a Data Science project.
+The [CRISP-DM framework, adapted for Data Science](https://towardsdatascience.com/crisp-dm-ready-for-machine-learning-projects-2aad9172056a) was used to organize the resolution of this problem. The main reason for adopting this framework is its ability to offer solutions and business insights quickly, on an ongoing basis, during a Data Science project.
 
-Finally, in this project I had the opportunity to use solutions from the largest cloud provider in the world (AWS), so that the resolution of the problem was as close as possible to a real situation.
+Finally, in this project I had the opportunity to use solutions from the largest cloud provider in the world (AWS) to make the resolution of this problem as close as possible to a real situation.
 ## References
 * Kaggle Dataset: https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction
 * CRISP-DM for Data Scientists: https://towardsdatascience.com/crisp-dm-ready-for-machine-learning-projects-2aad9172056a
