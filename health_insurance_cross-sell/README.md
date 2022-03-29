@@ -79,16 +79,19 @@ The application then returns a table containing the data of these customers with
 ### Insight 01:
 
 ![insight01](/health_insurance_cross-sell/reports/figures/insight-01-pct-responses.png)
+
 Only 12.26% of customers are interested in a new insurance offer. Considering the size of the base (300k+ customers), it is necessary to develop a solution to find these few interested customers at a low cost.
 
 ### Insight 02:
 
 ![insight02](/health_insurance_cross-sell/reports/figures/insight02-avg-age-interested.png) 
+
 The average age of interested customers is approximately 45 years.
 
 ### Insight 03: 
 
 ![insight03](/health_insurance_cross-sell/reports/figures/insight03-damaged-before.png)
+
 Customers with a previously damaged vehicle are 45x more likely to wish to receive a new insurance offer.
 ## Machine Learning Model Applied
 After cross-validation, the model chosen was Random Forest, as it presented the best average result in the *Recall@K* metric, the most relevant in this problem.
@@ -96,7 +99,7 @@ After cross-validation, the model chosen was Random Forest, as it presented the 
 ## Machine Learning Performance
 
 **Holdout Validation:**
-|MODEL              |PRECISION  |RECALL |k%    |
+|Model              |Precision  |Recall |k%    |
 |:-----------------:|:---------:|:-----:|:----:|
 |random_forest      |0.2718     |0.8921 |40.0  |
 |extra_trees        |0.2696     |0.8848 |40.0  |
@@ -104,7 +107,7 @@ After cross-validation, the model chosen was Random Forest, as it presented the 
 |knn                |0.2616     |0.8587 |40.0  |
 
 **Cross-validation:**
-|MODEL              |K_FOLDS    |PRECISION_MEAN |PRECISION_STD  |RECALL_MEAN    |RECALL_STD |k%    |
+|Model              |k_folds    |precision_avg  |precision_std  |recall_avg     |recall_std |k%    |
 |:-----------------:|:---------:|:-------------:|:-------------:|:-------------:|:---------:|:----:|
 |random_forest      |5          |0.2734         |0.0007         |0.8924         |0.0020     |40.0  |
 |extra_trees        |5          |0.2697         |0.0009         |0.8800         |0.0019     |40.0  |
