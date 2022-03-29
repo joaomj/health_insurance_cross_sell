@@ -104,3 +104,13 @@ The [CRISP-DM framework, adapted for Data Science](https://towardsdatascience.co
 
 Finally, in this project I had the opportunity to use solutions from the largest cloud provider in the world (AWS), so that the resolution of the problem was as close as possible to a real situation.
 ## References
+* Kaggle Dataset: https://www.kaggle.com/datasets/anmolkumar/health-insurance-cross-sell-prediction
+* CRISP-DM for Data Scientists: https://towardsdatascience.com/crisp-dm-ready-for-machine-learning-projects-2aad9172056a
+* Cost per Lead in the Insurance Market: https://insuranceleadsguide.com/buying-insurance-leads/
+* Cramér's V correlation matrix: https://www.kaggle.com/code/chrisbss1/cramer-s-v-correlation-matrix/notebook
+* Hold-out vs. Cross-validation in Machine Learning: https://medium.com/@eijaz/holdout-vs-cross-validation-in-machine-learning-7637112d3f8f
+* Precision and Recall at K: https://medium.com/@m_n_malaeb/
+recall-and-precision-at-k-for-recommender-systems-618483226c54
+* Serverless Deployment of Machine Learning Models on AWS Lambda: https://towardsdatascience.com/serverless-deployment-of-machine-learning-models-on-aws-lambda-5bd1ca9b5c42
+* Deploying a Streamlit app on AWS EC2: https://towardsdatascience.com/how-to-deploy-a-streamlit-app-using-an-amazon-free-ec2-instance-416a41f69dc3
+* Fundamentals of MLOps — Part 2 | Data & Model Management with DVC: https://medium.com/analytics-vidhya/fundamentals-of-mlops-part-2-data-model-management-with-dvc-6be2ad284ec4
