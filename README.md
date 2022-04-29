@@ -74,7 +74,7 @@ The model was deployed as a containerized **AWS Lambda Function** via **Docker**
 
 The “real” data (the test dataset) was hosted on **AWS S3**.
 
-Access to the model is through a **Streamlit** application hosted in a virtual machine on AWS EC2: [ACCESS URL](http://3.93.153.219:8501/).
+Access to the model is through a **Streamlit** application hosted in a virtual machine on AWS EC2.
 
 
 ![streamlit_app_screenshot](/health_insurance_cross-sell/reports/figures/streamlit_app_screenshot.png)
